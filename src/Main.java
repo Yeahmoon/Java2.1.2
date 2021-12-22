@@ -1,17 +1,18 @@
 public class Main {
     public static void main(String[] args) {
-        int Balance = 100;
+        int balance = 100;
         //начальный баланс
-        int Limit = 1000;
+        int limit = 1000;
         //лимит пополнения для бонуса
-        int Deposite = 999;
-        int Bonus = Deposite / 100;
+        int deposite = 500;
 
-        if (Deposite < Limit){
-            Bonus = 0;
+        int bonus = 0;
+        //изначальный бонус
+        if (deposite > limit) {
+            bonus = deposite / 100;
         }
+        int total = balance + deposite + bonus;
 
-        int Total = Balance + Deposite + Bonus;
-        System.out.println(Total);
+        System.out.println(total);
     }
 }
